@@ -10,7 +10,7 @@ public class Day1
 {
     public static void Part2()
     {
-        var lines = Helpers.GetLines();
+        var lines = Helpers.GetLines(1);
         List<string> modifiedLines = new();
 
         foreach (var line in lines)
@@ -40,7 +40,7 @@ public class Day1
     }
     public static void Part1()
     {
-        var lines = Helpers.GetLines();
+        var lines = Helpers.GetLines(1);
 
         Console.WriteLine(Solution(lines));
     }
