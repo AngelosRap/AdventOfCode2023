@@ -8,7 +8,9 @@ public static class Helpers
 
     public static string GetText(int day) => File.ReadAllText(GetPath(day));
 
-    public static string ListToString(this IEnumerable<string> value) => string.Join("\n", value);
+    public static string ListToString<T>(this IEnumerable<T> value) => string.Join("\n", value);
 
     private static string GetPath(int day) => $"{PATH}Day_{day}.txt";
+
+    public static List<string> GetLines(string text) => [.. text.Split("\n")];
 }
